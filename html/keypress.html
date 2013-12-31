@@ -1,0 +1,28 @@
+<!DOCTYPE html >
+<html>
+<head>
+	<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script>
+		$(function() {
+			$('#input').on('keydown', function(event) {
+				// event.preventDefault();
+				// event.stopPropagation();
+			});
+			$('#input').on('keypress', function(event) {
+				e = event.originalEvent;
+				$('#target').html($('#target').html() + '"' + e.key + '", "' + e.char + '", "' + e.code + '", "' + e.keyIdentifier + '", "' + e.keyCode + '", "' + e.charCode + '", "' + e.which + '", "' + e.modifiers + '", "' + e.ctrlKey + '", "' + e.shiftKey + '", "' + e.altKey + '", "' + e.metaKey + '"<br/>');
+				event.preventDefault();
+				event.stopPropagation();
+			});
+			$('#input').on('keyup', function(event) {
+				event.preventDefault();
+				event.stopPropagation();
+			});
+		});
+	</script>
+</head>
+<body>
+	<input type="text" id="input"/>
+  <textarea id="target"></textarea>
+</body>
+</html>

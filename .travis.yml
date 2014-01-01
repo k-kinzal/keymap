@@ -1,0 +1,20 @@
+language:
+- php
+- node_js
+php:
+- '5.3'
+node_js:
+- '0.11'
+before_script:
+- curl -s https://getcomposer.org/installer | php
+- php composer.phar install --prefer-source
+- npm install -g grunt-cli
+- grunt deploy --key=$AWS_KEY --secret=$AWS_SECRET_KEY
+script:
+- vendor/bin/paratest -p 1 -f --phpunit=vendor/bin/phpunit
+env:
+  global:
+  - secure: OR2WzK10EAjNuPc65x02izk/OI6WAf4IQv7+XK4e2XQXuPN58IbbOLDtJajzNcJrG0Y8zhId4kvym9Gck3ZixMcNXetyxbK9tQkc1Xiy+4AlPZ55lVCP7f/pIpeN2e4xgkN95OlyRCTmTNRoGsCm4efieIlJQI/No/696IYqGq8=
+  - secure: G4UfXmJh6VFlngByHk6qMVS1+M77vRLKrFWSvI7N3j+ZDqZZxL4rO/gPnc25KA+0Iy/7Lp/SIQ5AUM2INwMREF7IU0xUUV0+XZzxCE0DiF6jYuxNjRPSBtZaZa0TYbE5QlE8huy2BOBZJveNz0yteBN9UftQjC6wvVxqKmHl1GQ=
+  - secure: Cc0wzlCDLPewfadw8EEz9m5IExLlHHZSWh19JAo959NpBLu8H+SZpg8xOnZki0pZPuQX/K/0EcaQEeN48NhikUyiECdDUd7e5UKPlou7xsvjARv83oKd+tslmgIrg4O+JVAEfPq+OxFRLCrdR9O1ppyDFv/dNYSH0b49obfAe5A=
+  - secure: VTMG9507PavVzzemvGNJcJHdGvBfULcEPUeyHdXSUkyi/9Q8AYFEqMqc0H/cJ1NWmJfeM3U1xaSNrGgkRf2ZKWPlS16JhmnVwUzlIxHH4j+bbqyf/r2n5q9CZlRPc0pIsutaKfF1q80ZlP5J3QIGhjsmZwGeo2j7IGPkrda7cSk=

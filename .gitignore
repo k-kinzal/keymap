@@ -1,4 +1,6 @@
 .DS_Store
 composer.phar
 composer.lock
+keymap.db
+node_modules
 vendor

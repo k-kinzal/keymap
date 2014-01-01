@@ -11,7 +11,7 @@
          syntaxCheck="true">
     <testsuites>
         <testsuite name="all">
-            <directory suffix="Test.php">/src/KeyMap</directory>
+            <directory suffix="Test.php">/src/Keymap</directory>
         </testsuite>
     </testsuites>
 </phpunit>

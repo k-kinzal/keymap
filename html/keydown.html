@@ -5,18 +5,29 @@
 	<script>
 		$(function() {
 			$('#input').on('keydown', function(event) {
-				e = event.originalEvent;
+				var e = event.originalEvent;
 				$('#target').html($('#target').html() + '"' + e.key + '", "' + e.char + '", "' + e.code + '", "' + e.keyIdentifier + '", "' + e.keyCode + '", "' + e.charCode + '", "' + e.which + '", "' + e.modifiers + '", "' + e.ctrlKey + '", "' + e.shiftKey + '", "' + e.altKey + '", "' + e.metaKey + '"<br/>');
+				e.returnValue = false;
 				event.preventDefault();
 				event.stopPropagation();
+
+				return false;
 			});
 			$('#input').on('keypress', function(event) {
+				var e = event.originalEvent;
+				e.returnValue = false;
 				event.preventDefault();
 				event.stopPropagation();
+
+				return false;
 			});
 			$('#input').on('keyup', function(event) {
+				var e = event.originalEvent;
+				e.returnValue = false;
 				event.preventDefault();
 				event.stopPropagation();
+
+				return false;
 			});
 		});
 	</script>

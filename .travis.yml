@@ -2,7 +2,7 @@ language:
 - php
 - node_js
 php:
-- '5.3'
+- '5.4'
 node_js:
 - '0.11'
 before_script:
@@ -13,6 +13,9 @@ before_script:
 - grunt deploy --key=$AWS_KEY --secret=$AWS_SECRET_KEY
 script:
 - vendor/bin/paratest -p 1 -f --phpunit=vendor/bin/phpunit
+branches:
+  only:
+    - master
 env:
   global:
   - secure: OR2WzK10EAjNuPc65x02izk/OI6WAf4IQv7+XK4e2XQXuPN58IbbOLDtJajzNcJrG0Y8zhId4kvym9Gck3ZixMcNXetyxbK9tQkc1Xiy+4AlPZ55lVCP7f/pIpeN2e4xgkN95OlyRCTmTNRoGsCm4efieIlJQI/No/696IYqGq8=

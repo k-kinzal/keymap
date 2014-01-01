@@ -1,5 +1,5 @@
 <?php
-namespace KeyMap;
+namespace Keymap;
 
 class TestCase extends \Sauce\Sausage\WebDriverTestCase
 {

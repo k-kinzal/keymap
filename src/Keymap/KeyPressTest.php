@@ -1,5 +1,5 @@
 <?php
-namespace KeyMap;
+namespace Keymap;
 
 class KeyPressTest extends TestCase
 {

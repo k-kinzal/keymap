@@ -12,7 +12,7 @@
     },
     "autoload": {
         "psr-0": {
-            "KeyMap": "src/"
+            "Keymap": "src/"
         }
     },
     "minimum-stability": "dev"

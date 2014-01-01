@@ -3,12 +3,6 @@ namespace Keymap;
 
 class TestCase extends \Sauce\Sausage\WebDriverTestCase
 {
-    public function setUp()
-    {
-        parent::setUp();
-
-        $this->setBuild($_ENV['TRAVIS_BUILD_NUMBER']);
-    }
     /**
      * Send key and logging event attribute.
      */

@@ -11,6 +11,7 @@ before_script:
 - npm install -g grunt-cli
 - npm install
 - grunt deploy --key=$AWS_KEY --secret=$AWS_SECRET_KEY
+- export SAUCE_BUILD=$TRAVIS_BUILD_NUMBER
 script:
 - vendor/bin/paratest -p 1 -f --phpunit=vendor/bin/phpunit
 branches:

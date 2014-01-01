@@ -100,7 +100,7 @@ class DB
 			self::$sth = $db->prepare($sql);
 		}
 
-		self::$sth->execute(self::$sth, [
+		self::$sth->execute(array(
 			$data['name'],
 			$data['browser'],
 			$data['version'],
@@ -120,7 +120,7 @@ class DB
 			$data['shiftKey'],
 			$data['altKey'],
 			$data['metaKey'],
-		]);
+		));
 
 	}
 

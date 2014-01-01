@@ -37,7 +37,6 @@ class TestCase extends \Sauce\Sausage\WebDriverTestCase
                 $prev = $str;
                 $str = $s;
             }
-            file_put_contents('log', '['.trim($str, ',').']'."\n");
             $obj = json_decode('['.trim($str, ',').']', true); // $str format is {...},{...},
             // logging
             foreach ($obj as $index => $line)

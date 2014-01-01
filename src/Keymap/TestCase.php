@@ -26,7 +26,7 @@ class TestCase extends \Sauce\Sausage\WebDriverTestCase
             $char = json_decode('"'.$unicodeChar.'"');
             $this->keys($char);
             // fixed alert off on ie.
-            try { $this->dismissAlert();} catch (Exception $e) { }
+            try { $this->dismissAlert(); } catch (\Exception $e) { }
             // get result by javascript event.
             // fixed ie and other browser.
             if ($this->getBrowser() == 'internet explorer') {

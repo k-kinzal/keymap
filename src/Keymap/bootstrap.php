@@ -16,12 +16,11 @@ class DB
 		if (!isset(self::$db))
 		{
 			$path = dirname(dirname(dirname(__FILE__))).DIRECTORY_SEPARATOR.'keymap.db';
-			@unlink($path);
 			self::$db = new PDO('sqlite:'.$path);
 			self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			self::$db->query('PRAGMA encoding = "UTF-8";');
 			self::$db->query("
-				CREATE TABLE Events (
+				CREATE TABLE IF NOT EXISTS Events (
 					'no' INTEGER PRIMARY KEY AUTOINCREMENT,
 					'name' TEXT,
 					'browser' TEXT,
@@ -125,3 +124,4 @@ class DB
 	}
 
 }
+DB::instance();

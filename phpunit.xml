@@ -3,11 +3,15 @@
          backupStaticAttributes="false"
          bootstrap="src/Keymap/bootstrap.php"
          colors="true"
-         convertErrorsToExceptions="true"
+         convertErrorsToExceptions="false"
          convertNoticesToExceptions="false"
          convertWarningsToExceptions="false"
+         forceCoversAnnotation="false"
          processIsolation="false"
-         stopOnFailure="true"
+         stopOnError="false"
+         stopOnFailure="false"
+         stopOnIncomplete="false"
+         stopOnSkipped="false"
          syntaxCheck="true">
     <testsuites>
         <testsuite name="all">

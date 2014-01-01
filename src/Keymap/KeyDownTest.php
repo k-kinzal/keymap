@@ -9,6 +9,7 @@ class KeyDownTest extends TestCase
         //     'desiredCapabilities' => array(
         //         'version' => '11',
         //         'platform' => 'Windows 8.1',
+        //         'build' => $_ENV['TRAVIS_JOB_ID'],
         //     )
         // ),
         // array(
@@ -16,6 +17,7 @@ class KeyDownTest extends TestCase
         //     'desiredCapabilities' => array(
         //         'version' => '10',
         //         'platform' => 'Windows 8',
+        //         'build' => $_ENV['TRAVIS_JOB_ID'],
         //     )
         // ),
         // // array(
@@ -23,6 +25,7 @@ class KeyDownTest extends TestCase
         // //     'desiredCapabilities' => array(
         // //         'version' => '9',
         // //         'platform' => 'Windows 7',
+        // //         'build' => $_ENV['TRAVIS_JOB_ID'],
         // //     )
         // // ),
         // // array(
@@ -30,6 +33,7 @@ class KeyDownTest extends TestCase
         // //     'desiredCapabilities' => array(
         // //         'version' => '8',
         // //         'platform' => 'Windows 7',
+        // //         'build' => $_ENV['TRAVIS_JOB_ID'],
         // //     )
         // // ),
         // // array(
@@ -37,6 +41,7 @@ class KeyDownTest extends TestCase
         // //     'desiredCapabilities' => array(
         // //         'version' => '7',
         // //         'platform' => 'Windows XP',
+        // //         'build' => $_ENV['TRAVIS_JOB_ID'],
         // //     )
         // // ),
         // // array(
@@ -44,6 +49,7 @@ class KeyDownTest extends TestCase
         // //     'desiredCapabilities' => array(
         // //         'version' => '6',
         // //         'platform' => 'Windows XP',
+        // //         'build' => $_ENV['TRAVIS_JOB_ID'],
         // //     )
         // // ),
         array(
@@ -51,6 +57,7 @@ class KeyDownTest extends TestCase
             'desiredCapabilities' => array(
                 'version' => '31',
                 'platform' => 'Windows 8.1',
+                'build' => $_ENV['TRAVIS_JOB_ID'],
             )
         ),
         // array(
@@ -58,6 +65,7 @@ class KeyDownTest extends TestCase
         //     'desiredCapabilities' => array(
         //         'version' => '25',
         //         'platform' => 'Windows 8.1',
+        //         'build' => $_ENV['TRAVIS_JOB_ID'],
         //     )
         // ),
         // array(
@@ -65,6 +73,7 @@ class KeyDownTest extends TestCase
         //     'desiredCapabilities' => array(
         //         'version' => '12',
         //         'platform' => 'Windows 7',
+        //         'build' => $_ENV['TRAVIS_JOB_ID'],
         //     )
         // ),
         // // array(
@@ -72,6 +81,7 @@ class KeyDownTest extends TestCase
         // //     'desiredCapabilities' => array(
         // //         'version' => '7',
         // //         'platform' => 'OS X 10.9',
+        // //         'build' => $_ENV['TRAVIS_JOB_ID'],
         // //     )
         // // ),
     );

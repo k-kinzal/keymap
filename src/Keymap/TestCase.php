@@ -41,7 +41,6 @@ class TestCase extends \Sauce\Sausage\WebDriverTestCase
             // logging
             foreach ($obj as $index => $line)
             {
-                file_put_contents('log', print_r($line, true), FILE_APPEND);
                 $line['name'] = $name;
                 $line['browser'] = $this->getBrowser();
                 $line['version'] = $this->getDesiredCapabilities()['version'];

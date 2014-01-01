@@ -2,11 +2,27 @@
 <html>
 <head>
 	<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.2.6/json3.min.js"></script>
 	<script>
 		$(function() {
 			$('#input').on('keydown', function(event) {
 				var e = event.originalEvent;
-				$('#target').html($('#target').html() + '"' + e.key + '", "' + e.char + '", "' + e.code + '", "' + e.keyIdentifier + '", "' + e.keyCode + '", "' + e.charCode + '", "' + e.which + '", "' + e.modifiers + '", "' + e.ctrlKey + '", "' + e.shiftKey + '", "' + e.altKey + '", "' + e.metaKey + '"<br/>');
+				var obj = {
+					"key": e.key,
+					"char": e.char,
+					"code": e.code,
+					"keyIdentifier": e.keyIdentifier,
+					"keyCode": e.keyCode,
+					"charCode": e.charCode,
+					"which": e.which,
+					"modifiers": e.modifiers,
+					"ctrlKey": e.ctrlKey,
+					"shiftKey": e.shiftKey,
+					"altKey": e.altKey,
+					"metaKey": e.metaKey
+				};
+				$('#target').html($('#target').html() + JSON.stringify(obj) + ',');
+
 				e.returnValue = false;
 				event.preventDefault();
 				event.stopPropagation();

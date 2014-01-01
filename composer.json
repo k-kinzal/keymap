@@ -1,5 +1,19 @@
 {
+    "name": "keymap",
+    "description": "verification javascript keyboard event.",
+    "authors": [
+        {
+            "name": "kinzal",
+            "email": "kinzal@logn.in"
+        }
+    ],
     "require": {
         "sauce/sausage": ">=0.10.0"
-    }
+    },
+    "autoload": {
+        "psr-0": {
+            "KeyMap": "src/"
+        }
+    },
+    "minimum-stability": "dev"
 }

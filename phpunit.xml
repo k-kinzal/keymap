@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="src/KeyMap/bootstrap.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="false"
+         convertWarningsToExceptions="false"
+         processIsolation="false"
+         stopOnFailure="true"
+         syntaxCheck="true">
+    <testsuites>
+        <testsuite name="all">
+            <directory suffix="Test.php">/src/KeyMap</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

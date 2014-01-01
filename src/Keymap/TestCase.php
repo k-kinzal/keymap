@@ -3,6 +3,14 @@ namespace Keymap;
 
 class TestCase extends \Sauce\Sausage\WebDriverTestCase
 {
+    public function setUp()
+    {
+        parent::setUp();
+
+        $caps = $this->getDesiredCapabilities();
+        $caps['build'] = $_ENV['TRAVIS_JOB_ID'];
+        $this->setDesiredCapabilities($caps);
+    }
     /**
      * Send key and logging event attribute.
      */

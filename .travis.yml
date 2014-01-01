@@ -9,6 +9,7 @@ before_script:
 - curl -s https://getcomposer.org/installer | php
 - php composer.phar install --prefer-source
 - npm install -g grunt-cli
+- npm install
 - grunt deploy --key=$AWS_KEY --secret=$AWS_SECRET_KEY
 script:
 - vendor/bin/paratest -p 1 -f --phpunit=vendor/bin/phpunit

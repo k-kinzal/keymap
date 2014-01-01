@@ -8,7 +8,7 @@ class TestCase extends \Sauce\Sausage\WebDriverTestCase
         parent::setUp();
 
         $caps = $this->getDesiredCapabilities();
-        $caps['build'] = $_ENV['TRAVIS_JOB_ID'];
+        $caps['build'] = $_ENV['TRAVIS_BUILD_NUMBER'];
         $this->setDesiredCapabilities($caps);
     }
     /**

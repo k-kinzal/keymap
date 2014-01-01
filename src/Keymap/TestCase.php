@@ -7,9 +7,7 @@ class TestCase extends \Sauce\Sausage\WebDriverTestCase
     {
         parent::setUp();
 
-        $caps = $this->getDesiredCapabilities();
-        $caps['build'] = $_ENV['TRAVIS_BUILD_NUMBER'];
-        $this->setDesiredCapabilities($caps);
+        $this->setBuild($_ENV['TRAVIS_BUILD_NUMBER']);
     }
     /**
      * Send key and logging event attribute.

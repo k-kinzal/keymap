@@ -1,0 +1,23 @@
+{
+  "name": "keymap",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-s3": "~0.2.0-alpha.3",
+    "matchdep": "~0.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k-kinzal/keymap.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k-kinzal/keymap/issues"
+  },
+  "homepage": "https://github.com/k-kinzal/keymap"
+}

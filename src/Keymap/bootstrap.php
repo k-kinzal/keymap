@@ -1,4 +1,6 @@
 <?php
+error_reporting( error_reporting() & ~E_NOTICE );
+
 require 'vendor/autoload.php';
 
 class DB

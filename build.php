@@ -141,6 +141,7 @@ $sql .= "
   ORDER BY t0.unicode, t0.no
 ";
 $sth = $db->query($sql);
+$unicode = '';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -280,7 +281,7 @@ $sth = $db->query($sql);
 				<?php foreach ($browsers as $index => $browser) { ?>
 				<th colspan="12">keydown</th>
 				<th colspan="12">keypress</th>
-				<th colspan="12">keydown</th>
+				<th colspan="12">keyup</th>
 				<?php } ?>
 			</tr>
 			<tr>
@@ -330,14 +331,14 @@ $sth = $db->query($sql);
 		<tbody>
 		  <?php foreach ($sth as $index => $record) { ?>
 			<tr>
-				<th><?php echo ($record['unicode'] != $unicode ? $record['unicode'] : "") ?></th>
-				<th><?php echo ($record['unicode'] != $unicode ? $record['glyph'] : "") ?></th>
+				<th><?php echo ($record['unicode'] != $unicode ? htmlentities($record['unicode'], ENT_HTML5|ENT_DISALLOWED, 'UTF-8') : "") ?></th>
+				<th><?php echo ($record['unicode'] != $unicode ? htmlentities($record['glyph'], ENT_HTML5|ENT_DISALLOWED, 'UTF-8') : "") ?></th>
 				<?php foreach ($browsers as $index => $browser) { ?>
 				<!-- keydown -->
-				<td><?php echo $record['key'.($index*3+1)] ?></td>
-				<td><?php echo $record['char'.($index*3+1)] ?></td>
-				<td><?php echo $record['code'.($index*3+1)] ?></td>
-				<td><?php echo $record['keyIdentifier'.($index*3+1)] ?></td>
+				<td><?php echo htmlentities($record['key'.($index*3+1)], ENT_HTML5|ENT_DISALLOWED, 'UTF-8') ?></td>
+				<td><?php echo htmlentities($record['char'.($index*3+1)], ENT_HTML5|ENT_DISALLOWED, 'UTF-8') ?></td>
+				<td><?php echo htmlentities($record['code'.($index*3+1)], ENT_HTML5|ENT_DISALLOWED, 'UTF-8') ?></td>
+				<td><?php echo htmlentities($record['keyIdentifier'.($index*3+1)], ENT_HTML5|ENT_DISALLOWED, 'UTF-8') ?></td>
 				<td><?php echo $record['keyCode'.($index*3+1)] ?></td>
 				<td><?php echo $record['charCode'.($index*3+1)] ?></td>
 				<td><?php echo $record['which'.($index*3+1)] ?></td>
@@ -347,10 +348,10 @@ $sth = $db->query($sql);
 				<td><?php echo $record['altKey'.($index*3+1)] ?></td>
 				<td><?php echo $record['metaKey'.($index*3+1)] ?></td>
 				<!-- keypress -->
-				<td><?php echo $record['key'.($index*3+2)] ?></td>
-				<td><?php echo $record['char'.($index*3+2)] ?></td>
-				<td><?php echo $record['code'.($index*3+2)] ?></td>
-				<td><?php echo $record['keyIdentifier'.($index*3+2)] ?></td>
+				<td><?php echo htmlentities($record['key'.($index*3+2)], ENT_HTML5|ENT_DISALLOWED, 'UTF-8') ?></td>
+				<td><?php echo htmlentities($record['char'.($index*3+2)], ENT_HTML5|ENT_DISALLOWED, 'UTF-8') ?></td>
+				<td><?php echo htmlentities($record['code'.($index*3+2)], ENT_HTML5|ENT_DISALLOWED, 'UTF-8') ?></td>
+				<td><?php echo htmlentities($record['keyIdentifier'.($index*3+2)], ENT_HTML5|ENT_DISALLOWED, 'UTF-8') ?></td>
 				<td><?php echo $record['keyCode'.($index*3+2)] ?></td>
 				<td><?php echo $record['charCode'.($index*3+2)] ?></td>
 				<td><?php echo $record['which'.($index*3+2)] ?></td>
@@ -360,10 +361,10 @@ $sth = $db->query($sql);
 				<td><?php echo $record['altKey'.($index*3+2)] ?></td>
 				<td><?php echo $record['metaKey'.($index*3+2)] ?></td>
 				<!-- keyup -->
-				<td><?php echo $record['key'.($index*3+3)] ?></td>
-				<td><?php echo $record['char'.($index*3+3)] ?></td>
-				<td><?php echo $record['code'.($index*3+3)] ?></td>
-				<td><?php echo $record['keyIdentifier'.($index*3+3)] ?></td>
+				<td><?php echo htmlentities($record['key'.($index*3+3)], ENT_HTML5|ENT_DISALLOWED, 'UTF-8') ?></td>
+				<td><?php echo htmlentities($record['char'.($index*3+3)], ENT_HTML5|ENT_DISALLOWED, 'UTF-8') ?></td>
+				<td><?php echo htmlentities($record['code'.($index*3+3)], ENT_HTML5|ENT_DISALLOWED, 'UTF-8') ?></td>
+				<td><?php echo htmlentities($record['keyIdentifier'.($index*3+3)], ENT_HTML5|ENT_DISALLOWED, 'UTF-8') ?></td>
 				<td><?php echo $record['keyCode'.($index*3+3)] ?></td>
 				<td><?php echo $record['charCode'.($index*3+3)] ?></td>
 				<td><?php echo $record['which'.($index*3+3)] ?></td>

@@ -11,18 +11,51 @@ module.exports = function(grunt) {
         region: 'ap-northeast-1',
         access: 'public-read'
       },
-      deploy: {
-        sync: [
+      deploy_selenium: {
+        upload: [
           {
             src: 'html/*.html',
             dest: 'keymap/'
           }
         ]
+      },
+      deploy: {
+        upload: [
+          {
+            src: 'build/keys.html',
+            dest: 'keymap/keys.html'
+          }
+        ]
       }
-    }
+    },
+    exec: {
+      mkdir: {
+        command: 'mkdir -p build'
+      },
+      build: {
+        command: 'php build.php > build/keys.html'
+      }
+    },
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'build/keys.html': 'build/keys.html'
+        }
+      }
+    },
   });
 
   // Default task(s).
-  grunt.registerTask('deploy', ['s3']);
+  grunt.registerTask('deploy-selenium', ['s3:deploy_selenium']);
+  grunt.registerTask('deploy', ['s3:deploy']);
+  grunt.registerTask('build', [
+    'exec:mkdir',
+    'exec:build',
+    'htmlmin'
+  ]);
 
 };

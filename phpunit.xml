@@ -12,7 +12,9 @@
          stopOnFailure="false"
          stopOnIncomplete="false"
          stopOnSkipped="false"
-         syntaxCheck="true">
+         syntaxCheck="true"
+         strict="false"
+         verbose="true">
     <testsuites>
         <testsuite name="all">
             <directory suffix="Test.php">/src/Keymap</directory>

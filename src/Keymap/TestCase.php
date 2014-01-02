@@ -15,8 +15,7 @@ class TestCase extends \Sauce\Sausage\WebDriverTestCase
         // send keys U+0000 - length.
         // U+0000 - U+00FF 255
         // U+0000 - U+FFFF 65535
-        for ($i = 0; $i <= $length; $i++)
-        {
+        for ($i = 0; $i <= $length; $i++) {
             // clear textarea element.
             $target->clear();
             // active textbox element.
@@ -39,13 +38,12 @@ class TestCase extends \Sauce\Sausage\WebDriverTestCase
             }
             $obj = json_decode('['.trim($str, ',').']', true); // $str format is {...},{...},
             // logging
-            foreach ($obj as $index => $line)
-            {
+            foreach ($obj as $index => $line) {
                 $line['name'] = $name;
                 $line['browser'] = $this->getBrowser();
                 $line['version'] = $this->getDesiredCapabilities()['version'];
                 $line['platform'] = $this->getDesiredCapabilities()['platform'];
-                $line['index'] = $index;
+                $line['no'] = $index;
                 $line['unicode'] = $unicodeChar;
                 $line['glyph'] = addcslashes($char, "\0..\32");
 

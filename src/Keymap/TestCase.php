@@ -15,7 +15,7 @@ class TestCase extends \Sauce\Sausage\WebDriverTestCase
         // send keys U+0000 - length.
         // U+0000 - U+00FF 255
         // U+0000 - U+FFFF 65535
-        for ($i = 0; $i <= $length; $i++) {
+        for ($i = 0; $i < $length; $i++) {
             // clear textarea element.
             $target->clear();
             // active textbox element.

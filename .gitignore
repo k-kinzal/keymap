@@ -2,5 +2,6 @@
 composer.phar
 composer.lock
 keymap.db
+build
 node_modules
 vendor
